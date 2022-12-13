@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+  <title>Portfolio d'Augustin Battistini</title>
+</head>
+
+<body>
+  <header>
+    <nav id="myTopnav" class="topnav">
+      <span>Portfolio Augustin</span>
+      <a href="#profil" class="active">Accueil</a>
+      <a href="#edito">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toogleResponsive()" aria-label="menu augustin">
+        <em class="fa fa-bars"></em>
+      </a>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section id="profil">
+      <img id="photo" src="images/profil.jpg" alt="mma photo" />
+      <H1>Battistini Augustin</H1>
+    </section>
+    <section id="edito" class="slideshow-container">
+
+
+
+      <!-- Partie diaporama -->
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="images/Lavevaisselle.png" style="width:100%">
+        <div class="text">Projet innovation</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/hotel.png" style="width:100%">
+        <div class="text">Projet Java</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/frontlever.jpg" style="width:100%">
+        <div class="text">Objectifs à court-terme</div>
+      </div>
+
+
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function slidesuivante(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+
+
+      <!-- les points de navigation -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- flèches de navigation  -->
+      <a class="prev" onclick="slidesuivante(-1)">&#10094;</a>
+      <a class="next" onclick="slidesuivante(1)">&#10095;</a>
+
+    </section>
+    <section id="projets">
+      <div class="flip-box" id="projet1">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Développement d'un jeu bataille navale sur Python</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Ajout d'une IA comme adversaire</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet2">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Développement d'un guide touristique en Java</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Guide tourstique affichant les hôtels et restaurants dans une région choisie selon certains critères
+              prédéfinis</h2>
+            <h2>Durée : 5 mois</h2>
+            <h2>Projet en groupe de 2</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet3">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Construction d'un fauteuil roulant en Arduino</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Fauteuil roulant fonctionnel</h2>
+            <h2>Activable sur plusieurs sources (infrarouges-joystick-application)</h2>
+            <h2>Détecteur d'obstacles et de lumière</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet4">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Catia V5</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Modélisation d'un lave-vaisselle fonctionnant à l'eau de cuisson des pâtes</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet5">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Portfolio </h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Programmation web avec du HTML / CSS </h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet6">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>Projet professionel</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>Ouvrir mon restaurant spécialisé</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section id="contact">
+      <h2>Vous pouvez me contacter à l'aide de ce formulaire</h2>
+      <form action="traitement.php" method="post">
+        <table>
+          <tr>
+            <td><label for="firstname">Entre votre prénom :</label></td>
+            <td>
+              <input type="text" name="firstname" id="firstname" placeholder="Saisissez votre texte ici" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lastname">Nom :</label></td>
+            <td>
+              <input type="text" name="lastname" id="lastname" placeholder="votre nom" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Adresse mail :</label></td>
+            <td>
+              <input type="email" name="email" id="email" placeholder="Votre adresse mail" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="objet">Motif :</label></td>
+            <td>
+              <input type="text" name="objet" id="objet" placeholder="Motif" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="message">Votre message :</label></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="button" onclick="submit()" value="Envoyer" /></td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
+
+
+
+
+
+
+
+  <footer>
+    <a href="https://www.twitter.com/" target="_blank" aria-label="icône twitter"><em
+        class="fa-brands fa-twitter fa-5x"></em></a>
+    <a href="https://www.linkedin.com/" target="_blank" aria-label="icône linkedin"><em
+        class="fa-brands fa-linkedin fa-5x"></em></a>
+    <a href="https://www.facebook.com/" target="_blank" aria-label="icône facebook"><em
+        class="fa-brands fa-facebook fa-5x"></em></a>
+    <a href="https://www.youtube.com" target="_blank" aria-label="icône youtube"><em
+        class="fa-brands fa-youtube fa-5x"></em></a>
+  </footer>
